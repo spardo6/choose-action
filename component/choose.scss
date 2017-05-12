@@ -1,0 +1,57 @@
+/**
+ * ESCOGER ACCIÓN
+ * @author Steven Pardo 2017-05-11
+ */
+.app-choose {
+	@include full-screen;
+	background-color: rgba(0, 0, 0, .8);
+	z-index: 10000;
+	overflow: hidden;
+	visibility: hidden;
+
+	.app-content {
+		display: flex;
+		align-items: center;
+		text-align: center;
+		height: 100%;
+	}
+
+	&__container {
+		position: relative;
+		background-color: #fff;
+		border: rem(1px) solid $color-four;
+		border-radius: rem(4px);
+		height: auto;
+		width: 100%;
+		max-width: rem(310px);
+		margin: 0 auto;
+		padding: rem(8px) 0;
+		@include box-shadow(rem(1px), rem(1px), rem(5px), rgba(0 , 0, 0, .8));
+	}
+
+	&__item {
+		padding: rem(16px);
+		text-align: left;
+		line-height: 1;
+		display: flex;
+		align-items: center;
+
+		& + & {
+			border-top: rem(1px) solid $color-five;
+		}
+	}
+
+	&__icon {
+		color: $color-one;
+		margin-right: 16px;
+		
+		i {
+			font-size: rem(26px);
+		}
+	}
+
+	&__text {
+		font-size: rem(16px);
+		flex: 1;
+	}
+}
